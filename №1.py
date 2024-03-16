@@ -1,4 +1,9 @@
 with open("cars.txt", "r") as a:
+    """Описание кода
+        b - массив с информацией о машинах вида: price, year, manufacturer, model, odometer, paint_color
+        f - новый файл odometer_car.txt
+        check - проверка количества машин
+    """
     b = list(map(lambda x: x.split("$"), a.readlines()))[1:]
     f = open("odometer_car.txt", "w", encoding="utf-8")
     check = 0
@@ -10,9 +15,3 @@ with open("cars.txt", "r") as a:
             break
 
     f.close()
-
-""" Описание кода
-b - массив с информацией о машинах вида: price, year, manufacturer, model, odometer, paint_color
-f - новый файл odometer_car.txt
-check - проверка количества машин
-"""
