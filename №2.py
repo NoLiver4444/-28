@@ -17,4 +17,4 @@ with open("cars.txt", "r") as a:
     b = list(map(lambda x: x.split("$"), a.readlines()))[1:]
     b = sort(b)
     for i in range(3):
-        print(f"""{b[i][2]} {b[i][3]}; Цвет: {b[i][-1][:-1]}; Пробег: {b[i][-2]}; Цена: {b[i][0]}""")
+        print(f"""{b[i][2]} {b[i][3]}; Цвет: {b[i][-1].replace("\n", "")}; Пробег: {b[i][-2]}; Цена: {b[i][0]}""")
