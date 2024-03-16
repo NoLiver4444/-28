@@ -22,6 +22,12 @@ def binary_search(mas, low, high):
 
 
 with open("cars.txt", "r") as a:
+    """Описание кода
+            b - массив с информацией о машинах вида: price, year, manufacturer, model, odometer, paint_color
+            min_input, max_input - границы
+            c - массив цен
+            q - массив с границами
+    """
     b = list(map(lambda x: x.split("$"), a.readlines()))[1:]
     b = list(sorted(b, key=lambda x: int(x[0])))
     c = list(map(lambda x: int(x[0]), b))

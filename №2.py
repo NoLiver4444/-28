@@ -14,6 +14,9 @@ def sort(b):
 
 
 with open("cars.txt", "r") as a:
+    """Описание кода
+            b - массив с информацией о машинах вида: price, year, manufacturer, model, odometer, paint_color
+    """
     b = list(map(lambda x: x.split("$"), a.readlines()))[1:]
     b = sort(b)
     for i in range(3):
