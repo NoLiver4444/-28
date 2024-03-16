@@ -9,7 +9,7 @@ with open("cars.txt", "r") as a:
     check = 0
     for i in b:
         if float(i[4]) < 10000:
-            f.write(f"""{i[2]} {i[3]}; Цвет: {i[-1][:-1]}; Пробег: {i[-2]}; Цена: {i[0]}\n""")
+            f.write(f"""{i[2]} {i[3]}; Цвет: {i[-1].replace("\n", "")}; Пробег: {i[-2]}; Цена: {i[0]}\n""")
             check += 1
         if check == 10:
             break
